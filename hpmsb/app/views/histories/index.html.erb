@@ -1,0 +1,7 @@
+<button class="btn btn-large btn-success btn-block"><i class="icon-th-list icon-white"></i> Sejarah Himpunan Pelajar Mahasiswa Sumbawa Barat - Yogyakarta</button><br>
+
+    <% @histories.each do |history| %>
+      <tr>
+        <td><%= raw history.history %></td>
+      </tr>
+    <% end %>

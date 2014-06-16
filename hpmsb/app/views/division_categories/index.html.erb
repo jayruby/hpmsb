@@ -1,0 +1,31 @@
+<h1>Listing division_categories</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Description</th>
+      <th>Division</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @division_categories.each do |division_category| %>
+      <tr>
+        <td><%= division_category.name %></td>
+        <td><%= division_category.description %></td>
+        <td><%= division_category.Division %></td>
+        <td><%= link_to 'Show', division_category %></td>
+        <td><%= link_to 'Edit', edit_division_category_path(division_category) %></td>
+        <td><%= link_to 'Destroy', division_category, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Division category', new_division_category_path %>

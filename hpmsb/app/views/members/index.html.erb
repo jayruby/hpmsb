@@ -1,0 +1,42 @@
+<button class="btn btn-large btn-success btn-block"><i class="icon-th-list icon-white"></i>Anggota</button>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>Member</th>
+      <th>Full name</th>
+      <th>Place of birth</th>
+      <th>Birthday</th>
+      <th>Ksb address</th>
+      <th>Sub district</th>
+      <th>Jogja address</th>
+      <th>Gender</th>
+      <th>Phone</th>
+      <th>Pin bb</th>
+      <th>College</th>
+      <th>Major</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @members.each do |member| %>
+      <tr>
+        <td><%= member.member_id %></td>
+        <td><%= link_to member.full_name, member %></td>
+        <td><%= member.place_of_birth %></td>
+        <td><%= member.birthday %></td>
+        <td><%= member.ksb_address %></td>
+        <td><%= member.sub_district %></td>
+        <td><%= member.jogja_address %></td>
+        <td><%= member.gender %></td>
+        <td><%= member.phone %></td>
+        <td><%= member.pin_bb %></td>
+        <td><%= member.college %></td>
+        <td><%= member.major %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Member', new_member_path %>

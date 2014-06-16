@@ -1,0 +1,32 @@
+<h1> <%= @post.title %> </h1>
+<p>
+    <%= raw @post.body %>
+</p>
+<hr>
+<!-- komentar -->
+
+<h4>Komentar</h4>
+<% @post.comments.each do |comment| %>
+  <p>
+    <strong><%= comment.author %>
+    </strong>
+    <small><%= l comment.created_at, format: :long %></small>
+    <%= comment.body %>
+  </p>
+<% end %>
+<hr>
+
+<h4>Tambahkan komentar:</h4>
+<%= form_for([@post, @post.comments.build]) do |f| %>
+    <p>
+        <%= f.label :Nama %>
+        <%= f.text_field :author %>
+    </p>
+    <p>
+        <%= f.label :Komentar %>
+        <%= f.text_area :body %>
+    </p>
+    <p>
+        <%= f.submit "Save", class: "btn btn-medium btn-primary" %>
+    </p>
+<% end %>

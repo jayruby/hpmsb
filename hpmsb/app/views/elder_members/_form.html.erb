@@ -1,0 +1,57 @@
+<%= form_for(@elder_member) do |f| %>
+  <% if @elder_member.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@elder_member.errors.count, "error") %> prohibited this elder_member from being saved:</h2>
+
+      <ul>
+      <% @elder_member.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :elder_member_id %>
+    <%= f.text_field :elder_member_id %>
+  </div>
+  <div class="field">
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :place_of_birth %>
+    <%= f.text_field :place_of_birth %>
+  </div>
+  <div class="field">
+    <%= f.label :birthday %>
+    <%= f.date_select :birthday %>
+  </div>
+  <div class="field">
+    <%= f.label :ksb_address %>
+    <%= f.text_area :ksb_address %>
+  </div>
+  <div class="field">
+    <%= f.label :sub_district %>
+    <%= f.text_field :sub_district %>
+  </div>
+  <div class="field">
+    <%= f.label :jogja_address %>
+    <%= f.text_area :jogja_address %>
+  </div>
+  <div class="field">
+    <%= f.label :profession %>
+    <%= f.text_area :profession %>
+  </div>
+  <div class="field">
+    <%= f.label :experience %>
+    <%= f.text_area :experience %>
+  </div>
+  <div class="field">
+    <%= f.label :avatar %><br>
+    <%= f.file_field :avatar %>
+</div>
+  <div class="actions">
+    <%= f.submit "Save", class: "btn btn-medium btn-primary" %>
+  </div>
+<% end %>

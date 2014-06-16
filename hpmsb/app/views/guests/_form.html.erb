@@ -1,0 +1,49 @@
+<%= form_for(@guest) do |f| %>
+  <% if @guest.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@guest.errors.count, "error") %> prohibited this guest from being saved:</h2>
+
+      <ul>
+      <% @guest.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :number %>
+    <%= f.text_field :number %>
+  </div>
+  <div class="field">
+    <%= f.label :guest_id %>
+    <%= f.text_field :guest_id %>
+  </div>
+  <div class="field">
+    <%= f.label :full_name %>
+    <%= f.text_field :full_name %>
+  </div>
+  <div class="field">
+    <%= f.label :address %>
+    <%= f.text_area :address %>
+  </div>
+  <div class="field">
+    <%= f.label :cek_in %>
+    <%= f.date_select :cek_in, :label => "Tanggal", :start_year => 2002,  order: [:month, :day, :year],  prompt: [day: 'Choose day' , month: 'Choose month', year: 'Choose year'] %>
+  </div>
+  <div class="field">
+    <%= f.label :cek_out %>
+    <%= f.date_select :cek_out, :label => "Tanggal", :start_year => 2002,  order: [:month, :day, :year],  prompt: [day: 'Choose day' , month: 'Choose month', year: 'Choose year'] %>
+  </div>
+  <div class="field">
+    <%= f.label :necessary %>
+    <%= f.text_area :necessary %>
+  </div>
+  <div class="field">
+    <%= f.label :price %>
+    <%= f.text_field :price %>
+  </div>
+  <div class="actions">
+    <%= f.submit "Save", class: "btn btn-medium btn-primary"%>
+  </div>
+<% end %>

@@ -1,0 +1,43 @@
+<p id="notice"><%= notice %></p>
+<button class="btn btn-large btn-success btn-block"><i class="icon-th-list icon-white"></i> Detail Profile Anggota</button>
+<table class="table table-bordered">
+  <tr>
+    <td><img src="<%= image_url @member.avatar_url(:thumb) %>"></td>
+  <tr>
+    <td><strong>Member:</strong></td>
+    <td><%= @member.member_id %></td>
+  </tr>
+    <td><strong>Full name:</strong></td>
+    <td><%= @member.full_name %></td>
+  </tr>
+    <td><strong>Place of birth:</strong></td>
+    <td><%= @member.place_of_birth %></td>
+  </tr>
+    <td><strong>Birthday:</strong></td>
+    <td><%= @member.birthday %></td>
+  </tr>
+    <td><strong>Ksb address:</strong></td>
+    <td><%= @member.ksb_address %></td>
+  </tr>
+    <td><strong>Sub district:</strong></td>
+    <td><%= @member.sub_district %></td>
+  </tr>
+    <td><strong>Jogja address:</strong></td>
+    <td><%= @member.jogja_address %></td>
+  </tr>
+    <td><strong>Gender:</strong></td>
+    <td><%= @member.gender %></td>
+  </tr>
+    <td><strong>Phone:</strong></td>
+    <td><%= @member.phone %></td>
+  </tr>
+    <td><strong>Pin bb:</strong></td>
+    <td><%= @member.pin_bb %></td>
+  </tr>
+    <td><strong>College:</strong></td>
+    <td><%= @member.college %></td>
+  </tr>
+    <td><strong>Major:</strong></td>
+    <td><%= @member.major %></td>
+
+</table>

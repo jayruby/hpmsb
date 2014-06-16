@@ -1,0 +1,42 @@
+<%= form_for(@division) do |f| %>
+  <% if @division.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@division.errors.count, "error") %> prohibited this division from being saved:</h2>
+
+      <ul>
+      <% @division.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :division_id %>
+    <%= f.text_field :division_id %>
+  </div>
+  <div class="field">
+    <%= f.label :program %>
+    <%= f.text_field :program %>
+  </div>
+  <div class="field">
+    <%= f.label :start_date %>
+    <%= f.date_select :start_date %>
+  </div>
+  <div class="field">
+    <%= f.label :end_date %>
+    <%= f.date_select :end_date %>
+  </div>
+  <div class="field">
+    <%= f.label :cost %>
+    <%= f.text_field :cost, data: { role: 'money', a_sep: '.', a_dec: ',' } %>
+  </div>
+  <div class="field">
+    <%= f.label :status %>
+    <%= f.select(:status, [['Terlaksana', 'Terlaksana'],['Tidak Terlaksana', 'Tidak Terlaksana']],
+        { :prompt => "--Pilih salah satu--"}) %>
+  </div>
+  <div class="actions">
+    <%= f.submit "Save", class: "btn btn-medium btn-primary" %>
+  </div>
+<% end %>

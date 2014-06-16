@@ -1,0 +1,27 @@
+<button class="btn btn-large btn-success btn-block">
+    <i class="icon-th-list icon-white"></i>Tamu
+</button>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>Nama Lengkap</th>
+      <th>Alamat</th>
+      <th>Tanggal Masuk</th>
+      <th>Tanggal Keluar</th>
+      <th>Keperluan</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @guests.each do |guest| %>
+      <tr>
+        <td><%= guest.full_name %></td>
+        <td><%= raw guest.address %></td>
+        <td><%= guest.cek_in %></td>
+        <td><%= guest.cek_out %></td>
+        <td><%= raw guest.necessary %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+ <%= will_paginate %>

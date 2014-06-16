@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  elder_member_id: MyString
+  name: MyString
+  place_of_birth: MyString
+  birthday: 2014-05-13
+  ksb_address: MyText
+  sub_district: MyString
+  jogja_address: MyText
+  profession: MyText
+  experience: MyText
+
+two:
+  elder_member_id: MyString
+  name: MyString
+  place_of_birth: MyString
+  birthday: 2014-05-13
+  ksb_address: MyText
+  sub_district: MyString
+  jogja_address: MyText
+  profession: MyText
+  experience: MyText

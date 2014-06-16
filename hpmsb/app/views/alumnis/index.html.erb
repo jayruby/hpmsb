@@ -1,0 +1,25 @@
+<button class="btn btn-large btn-success btn-block">
+    <i class="icon-th-list icon-white"></i> Alumni
+</button>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>Alumni</th>
+      <th>Nama Lengkap</th>
+      <th>Tempat Lahir</th>
+      <th>Tanggal Lahir</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @alumnis.each do |alumni| %>
+      <tr>
+        <td><%= alumni.alumni_id %></td>
+        <td><%= link_to alumni.full_name, alumni %></td>
+        <td><%= alumni.place_of_birth %></td>
+        <td><%= alumni.birthday %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+<%= will_paginate %>

@@ -1,0 +1,29 @@
+<button class="btn btn-large btn-success btn-block">
+    <i class="icon-th-list icon-white"></i> Divisi
+</button>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>Divisi</th>
+      <th>Program</th>
+      <th>Tanggal Mulai</th>
+      <th>Tanggal Berakhir</th>
+      <th>Biaya</th>
+      <th>Status</th>
+
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @divisions.each do |division| %>
+      <tr>
+        <td><%= division.division_id %></td>
+        <td><%= division.program %></td>
+        <td><%= division.start_date %></td>
+        <td><%= division.end_date %></td>
+        <td><%= division.cost %></td>
+        <td><%= division.status %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

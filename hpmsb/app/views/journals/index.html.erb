@@ -1,0 +1,10 @@
+    <% @journals.each do |journal| %>
+        <%= link_to journal.title, journal %></br>
+       <em><small> <%= journal.issn %>
+        <%= journal.volume %></em></small>
+        <%= raw journal.abstract %>
+        <%= link_to 'Show', journal, class: "btn btn-medium btn-primary" %></br>
+    <hr>
+    <% end %>
+
+ <%= will_paginate %>

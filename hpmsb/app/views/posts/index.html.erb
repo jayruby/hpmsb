@@ -1,0 +1,11 @@
+<ul class="posts">
+    <% @posts.each do |post| %>
+        <h5><div class="title"><%= link_to post.title, post%></div>		
+        <em><small><%= l post.created_at, format: :short %></small></em></h5>
+        <div class="body"><%=  raw post.body %></div>
+		<div class="comments"><small><%= link_to "#{post.comments.count} komentar", post %></small></div>
+		<hr>
+    <% end %>
+</ul>
+ 
+ <%= will_paginate %>

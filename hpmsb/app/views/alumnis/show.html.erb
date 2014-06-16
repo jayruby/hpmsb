@@ -1,0 +1,48 @@
+<p id="notice"><%= notice %></p>
+
+<button class="btn btn-large btn-success btn-block">
+    <i class="icon-th-list icon-white"></i> Agenda
+</button>
+<table class="table table-bordered">
+    <tr>
+    <td><%= image_tag @alumni.avatar.url(:thumb) %></td>
+    <tr>  
+      <td><strong>Alumni</strong></td>
+      <td><%= @alumni.alumni_id %></td>
+    </tr>
+      <td><strong>Full name</strong></td>
+      <td><%= @alumni.full_name %></td>
+    </tr>
+      <td><strong>Place of birth</strong></td>
+      <td><%= @alumni.place_of_birth %></td>
+    </tr>
+      <td><strong>Birthday</strong></td>
+      <td><%= @alumni.birthday %></td>
+    </tr>
+      <td><strong>Ksb address</strong>
+      <td><%= raw @alumni.ksb_address %></td>
+    </tr>
+      <td><strong>Sub district</strong></td>
+      <td><%= @alumni.sub_district %></td>
+    </tr>
+      <td><strong>Address</strong></td>
+      <td><%= raw @alumni.address %></td>
+    </tr>
+      <td><strong>Gender</strong></td>
+      <td><%= @alumni.gender %></td>
+    </tr>
+      <td><strong>Email</strong></td>
+      <td><%= @alumni.email %></td>
+    </tr>
+      <td><strong>Phone</strong></td>
+      <td><%= @alumni.phone %></td>
+    </tr>
+      <td><strong>Pin bb</strong></td>
+      <td><%= @alumni.pin_bb %></td>
+    </tr>
+      <td><strong>College</strong></td>
+      <td><%= @alumni.college %></td>
+    </tr>
+      <td><strong>Major</strong></td>
+      <td><%= @alumni.major %></td>
+</table>

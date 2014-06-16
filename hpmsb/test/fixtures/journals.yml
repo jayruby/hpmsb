@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  issn: MyString
+  volume: MyString
+  title: MyString
+  authors: MyText
+  abstract: MyText
+  date: 2014-06-06
+
+two:
+  issn: MyString
+  volume: MyString
+  title: MyString
+  authors: MyText
+  abstract: MyText
+  date: 2014-06-06

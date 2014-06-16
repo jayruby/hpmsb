@@ -1,0 +1,21 @@
+<button class="btn btn-large btn-success btn-block"><i class="icon-th-list icon-white"></i> Pembina</button>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>Nama Lengkap</th>
+      <th>Tempat Lahir</th>
+      <th>Tanggal Lahir</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @elder_members.each do |elder_member| %>
+      <tr>
+        <td><%= link_to elder_member.name, elder_member %></td>
+        <td><%= elder_member.place_of_birth %></td>
+        <td><%= elder_member.birthday %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+ <%= will_paginate %>

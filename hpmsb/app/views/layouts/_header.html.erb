@@ -1,0 +1,73 @@
+<header class="navbar navbar-fixed-top navbar-inverse">
+  <div class="navbar-inner">
+    <div class="container">
+      <%= link_to "hpmsb", root_path, id: "logo" %>
+      <nav>
+        <ul class="nav pull-right">
+          <li><%= link_to "Home", root_path %></li>
+          <li>
+            <li id="fat-menu" class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                Profile<b class="caret"></b>
+              </a>
+              <ul class="dropdown-menu">
+                <li><%= link_to "Sejarah", histories_path %></li>
+                <li><%= link_to "Visi Misi", profiles_path %></li>     
+                <li><%= link_to "Prestasi", achievements_path %></li>           
+              </ul>
+            </li>
+          </li>
+          <li><%= link_to "Agenda", agendas_path %></li>
+          <li><%= link_to "Divisi", divisions_path %></li>
+          <li><%= link_to "Inventaris", inventories_path %></li>
+          <li><%= link_to "Jurnal", journals_path %></li>
+          <li><%= link_to "Pembina", elder_members_path %></li>
+          <li><%= link_to "Tamu", guests_path %></li>
+
+          <% if member_user_signed_in? %>
+            <li id="fat-menu" class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                Account <b class="caret"></b>
+              </a>
+              <ul class="dropdown-menu">
+                <li><%= link_to "Profile", edit_member_registration_path %></li>
+                <li><%= link_to "Setting", "#"%></li>
+                <li class="divider"></li>
+                <li>
+                <%= link_to "Logout", destroy_member_user_session_path, :method => :delete %>
+                </li>
+              </ul>
+            </li>
+          <% else %>
+            <li><%= link_to "Sign in",new_member_user_session_path %></li>
+          <% end %>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</header>
+<div class="container">
+  <div id="this-carousel-id" class="carousel slide">
+    <div class="carousel-inner">
+      <div class="active item">
+        <%= image_tag("sasakday.jpg" ) %>
+        <div class="carousel-caption">
+          <p>Sasak day</p>
+          <p>Alun-alun utara yogyakarta</p>
+        </div>
+      </div>
+      <div class="item">
+          <%= image_tag("mustang7.jpg") %>
+        <div class="carousel-caption">
+          <p>Musyawarah Tahunan Anggota ke 7</p>
+          <p>kaliurang</p>
+        </div>
+      </div>
+    </div>
+
+      <a class="carousel-control left" href="#this-carousel-id" data-slide="prev">&lsaquo;</a>
+      <a class="carousel-control right" href="#this-carousel-id" data-slide="next">&rsaquo;</a>
+  </div>
+<script src="javascripts/carousel.js"></script>
+
+  

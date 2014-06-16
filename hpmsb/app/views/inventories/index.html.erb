@@ -1,0 +1,21 @@
+<button class="btn btn-large btn-success btn-block"><i class="icon-th-list icon-white"></i>Inventaris</button>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>Nama</th>
+      <th>Jumlah</th>
+      <th>Status</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @inventories.each do |inventory| %>
+      <tr>
+        <td><%= inventory.name %></td>
+        <td><%= inventory.number %></td>
+        <td><%= inventory.status %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+ <%= will_paginate %>

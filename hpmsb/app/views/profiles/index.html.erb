@@ -1,0 +1,13 @@
+<button class="btn btn-large btn-success btn-block">
+    <i class="icon-th-list icon-white"></i> Visi & Misi
+</button>
+<table class="table table-striped">
+    <% @profiles.each do |profile| %>
+        <h4><%= profile.profile_id %><h4>
+        <h4><%= profile.title %></h4>
+        <%= raw profile.address %>
+        <%= raw profile.vision %>
+        <%= raw profile.mission %>
+    <% end %>
+</table>
+
